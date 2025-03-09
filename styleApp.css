@@ -167,84 +167,96 @@ body {
 }
 
 /*SECCIÓN DE SERVICIOS */
-.interfaz_2{
+.interfaz_2 {
     padding: 0px;
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
 }
 
-.titulo_servicios{
-    font-family:"serif";
+.titulo_servicios {
     text-align: center;
     background: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );
     padding: 15px 0;
     margin-bottom: 30px;
-    color: #F7F7F7;
-}
-
-.catering_eventos{
-    position: relative;
+    font-family: serif;
+    color: #f7f7f7;
 }
 
 .servicios {
-    display: flex; /* Permite que los elementos hijos se alineen horizontalmente */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .servicios > div {
-    position: relative; /* Permite que los elementos hijos se posicionen en relación a este contenedor */
-    margin: 0; /* Espacio entre los servicios */
-    width: 100%; /* Ajusta el ancho según sea necesario */
-    height: 192px;
-}
-
-.capa_oscura {
-    position: absolute; /* Posiciona la capa de forma absoluta */
-    top: 0; /* Alinea al inicio del contenedor */
-    left: 0; /* Alinea al inicio del contenedor */
-    right: 0; /* Alinea al final del contenedor */
-    bottom: 0; /* Alinea al final del contenedor */
-    background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad */
-    z-index: 1; /* Asegura que la capa oscura esté sobre otros elementos */
+    position: relative;
+    text-align: center;
+    overflow: hidden;
 }
 
 .servicios img {
-    display: block; /* Asegura que la imagen se muestre como un bloque */
-    width: 100%; /* Ajusta el ancho según sea necesario */
-    height: 192; /* Mantiene la proporción de la imagen */
-    z-index: 0; /* Asegura que la imagen esté debajo de la capa oscura */
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+    display: block;
 }
 
 .servicios h3 {
-    position: absolute; /* Posiciona el encabezado de forma absoluta */
-    top: 10px; /* Ajusta la posición vertical */
-    left: 10px; /* Ajusta la posición horizontal */
-    color: white; /* Color del texto */
-    z-index: 2; /* Asegura que el texto esté por encima de la capa oscura */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #020202;
     font-family: serif;
+    text-transform: uppercase;
+    z-index: 2;
 }
 
-  .servicios p {
-    text-align: center;
-    margin-bottom: 20px;
-  }*/
-
-  /*FIN DE SECCIÓN DE SERVICIOS*/
-
-/*SECCIÓN DE CLIENTES*/
-
-.clientes{
-    padding: 0px;
-    background-color: white;
+.servicios img:hover {
+    transform: scale(1.05);
 }
 
-.titulo_clientes{
-    font-family: serif;
-    text-align: center;
-    background: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );
-    padding: 15px 0;
-    margin-bottom: 30px;
-    color: #F7F7F7;
+.capa_oscura {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Capa de opacidad */
+    z-index: 1;
+    pointer-events: none;
+    transition: background 0.5s ease;
 }
+
+.servicios:hover .capa_oscura {
+    background: rgba(0, 0, 0, 0.7); /* Oscurece más al pasar el ratón */
+}
+
+button {
+    position: relative;
+    z-index: 3;
+    background-color: #c59a31;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #a87e25;
+}
+
+.servicios p {
+    color: white;
+    z-index: 3;
+    position: relative;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
 
 
 
@@ -281,3 +293,91 @@ img{
 }
 
 /*FIN DE SECCIÓN DE GALERÍA*/
+
+/*-- FORMULARIO--*/
+.interfaz_4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7F7F7; /* Fondo claro */
+    border-radius: 10px;
+    max-width: 500px; /* Limita el ancho máximo */
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+    width: 150px; /* Ajusta el tamaño del logo */
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+.reserva {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los elementos del formulario */
+}
+
+label {
+    font-size: 1rem;
+    color: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );; /* Color dorado para las etiquetas */
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #c59a31; /* Bordes dorados */
+    background-color: #fff;
+    color: #333; /* Texto en color oscuro */
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #aaa; /* Color del placeholder */
+}
+
+select {
+    appearance: none; /* Remueve el estilo nativo del select */
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #a87e25; /* Color más oscuro en focus */
+}
+
+/* Botón de Reservar */
+.boton_reservar button {
+    width: 30%;
+    padding: 15px;
+    background-color: #c59a31;
+    color: #F7F7F7;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton_reservar button:hover {
+    background-color: #a87e25; /* Efecto hover en el botón */
+}
+
+/* Contactos */
+.contactos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.redes img {
+    width: 40px; /* Tamaño de los íconos de redes sociales */
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.redes img:hover {
+    opacity: 0.8; /* Efecto hover en los íconos de redes sociales */
+}

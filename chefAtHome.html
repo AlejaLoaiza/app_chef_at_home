@@ -73,7 +73,7 @@
             <div class="menu_personalizado">
                 <h3>MENÚ PERSONALIZADO</h3>
                 <div class="capa_oscura"></div>
-                <img src="img/menu_personalizado.jpg" alt="Chef a domicilio" onclick="toggleContent('chef-a-domicilio')">
+                <img src="img/menu_personalizado.png" alt="Chef a domicilio" onclick="toggleContent('chef-a-domicilio')">
                 <div id="chef-a-domicilio" style="display: none;">
                   <p>Crea experiencias gastronómicas a medida, adaptando cada plato a tus gustos, necesidades dietéticas, ocasiones especiales, garantizando calidad y creatividad en cada comida.</p>
                   <button>Reservar</button>
@@ -93,7 +93,7 @@
             <div class="dietas_especiales">
                 <h3>DIETAS ESPECIALES</h3>
                 <div class="capa_oscura"></div>
-                <img src="img/dietas_especiales.jpg" alt="Chef a domicilio" onclick="toggleContent('chef-a-domicilio')">
+                <img src="img/dietas_especiales.png" alt="Chef a domicilio" onclick="toggleContent('chef-a-domicilio')">
                 <div id="chef-a-domicilio" style="display: none;">
                   <p>Diseña menús adaptados a necesidades específicas, como alimentación vegana, sin gluten o baja en calorías, garantizando platos nutritivos, equilibrados y llenos de sabor.</p>
                   <button>Reservar</button>
@@ -158,13 +158,49 @@
         </div>
     </section>
     
-    <section class="interfaz_3">
-        <div class="formulario">
-            
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+    <section class="interfaz_4">
+      <div class="logo">
+          <img src="img/logo1.png" alt="Icono del logo">
+      </div>
+      <form class="reserva">
+          <div class="nombre">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" placeholder="Juan Pérez">
+          </div>
+          <div class="telefono">
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone" placeholder="+57 315 330 6264">
+          </div>
+          <div class="servicio">
+              <label for="service">Servicio</label>
+              <select id="service">
+                  <option value="chef_domicilio">Chef a domicilio</option>
+                  <option value="asesoria_gastronomica">Asesoría gastronómica</option>
+                  <option value="eventos_especiales">Menú personalizado</option>
+                  <option value="dietas_especiales">Dietas especiales</option>
+                  <option value="banquetes">Clases de cocina</option>
+              </select>
+          </div>
+          <div class="fecha">
+              <label for="date">Fecha</label>
+              <input type="text" id="date" placeholder="dd/mm/aa">
+          </div>
+          <div class="comensales">
+              <label for="guests">No. comensales</label>
+              <input type="number" id="guests" placeholder="15">
+          </div>
+          <div class="boton_reservar">
+              <button type="submit">Reservar</button>
+          </div>
+      </form>
+      <div class="contactos">
+          <div class="redes">
+              <img src="img/">
+              <img src="img/">
+          </div>
+      </div>    
+    
+      <script src="script.js"></script>
 
     <script>
         function toggleContent(id) {
