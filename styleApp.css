@@ -11,7 +11,7 @@
 
 /*MENÚ PLEGABLE*/
 body {
-    background-color: 7f7f7#f8f8f8;
+    background-color: #F7F7F7;
     text-align: center;
 }
 
@@ -165,6 +165,7 @@ body {
         padding: 10px;
     }
 }
+/*FIN DE MENÚ RESPONSIVE*/  
 
 /*SECCIÓN DE SERVICIOS */
 .interfaz_2 {
@@ -231,38 +232,52 @@ body {
     background: rgba(0, 0, 0, 0.7); /* Oscurece más al pasar el ratón */
 }
 
-button {
+.button {
     position: relative;
     z-index: 3;
-    background-color: #c59a31;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
+    padding: 2px;
     transition: background 0.3s ease;
-    margin-top: 10px;
-}
-
-button:hover {
+    margin-top: 0px;
     background-color: #a87e25;
 }
 
+.button:hover {
+    background-color:linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );
+    margin: 0;
+    padding: 0;
+}
+
 .servicios p {
-    color: white;
+    color: #020202;
     z-index: 3;
     position: relative;
     font-size: 1rem;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 100px;
     margin-top: 10px;
 }
 
+.btns_reservar {
+    display: inline-block; /* Permite aplicar padding y margin */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 5px;
+    background-color: #f7f7f7
+    color: black; /* Texto negro */
+    border: 1px solid black; /* Borde negro */
+    text-decoration: none; /* Quita el subrayado */
+    text-align: center; /* Centra el texto */
+}
 
+.btns_reservar:hover {
+    background: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );
+    color: white;
+    border-color: #c59a31;
+}
 
 /*SECCIÓN CLIENTES*/
 .clientes {
     padding: 0px;
     background-color: #f7f7f7;
+    margin-top: 20px ;
 }
 
 .titulo_clientes {
