@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleApp.css">
+    <title>App Chef At Home</title>
+</head>
+<body>
+    <header>
+      <div class="interfaz_1">
+        <div class="menu-icono" onclick="toggleMenu()">
+          <img src="img/borguesa.png" alt="Icono del Menú" class="menu-icono-img">
+        </div>
+        
+        <nav class="menu" id="menu">
+          <img src="img/img_menu.png">
+            <ul>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Clientes</a></li>
+                <li><a href="#">Reserva</a></li>
+            </ul>
+        </nav>
+
+        <div class="Logo_inicio">
+          <div class="logo">
+            <img src="img/logo1.png" alt="logo1">
+          </div>
+          <div class="botones">
+            <a href="link servicios" class="button">Servicios</a>
+            <a href="link reserva" class="button">Reserva</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="interfaz_2">
+      <div>
+          <h2 class="titulo_servicios">SERVICIOS</h2>
+      </div>
+
+        <div class="servicios">
+            <div class="chef_a_domiciio">
+                <h3>CHEF A DOMICILIO</h3>
+                <div class="capa_oscura"></div>
+                <img src="img/chef_en_casa.jpg" alt="Chef a domicilio" onclick="toggleContent('chef-a-domicilio')">
+                <div id="chef-a-domicilio" style="display: none;">
+                  <p>Ofrece una experiencia gastronómica personalizada en la comodidad de tu hogar, preparando menús exclusivos según tus preferencias y necesidades. Ideal para cenas especiales, eventos privados o simplemente para disfrutar de alta cocina sin salir de casa.</p>
+                  <button>Reservar</button>
+                </div>
+            </div>
+
+            <div class="catering_eventos">
+                <h3>CATERING EVENTOS</h3>
+                <div class="capa_oscura"></div>
+                <img src="img/catering_eventos.jpg" alt="Chef a domicilio" onclick="toggleContent('chef-a-domicilio')">
+                <div id="chef-a-domicilio" style="display: none;">
+                  <p>Ofrece menús personalizados y servicio gastronómico de alta calidad para todo tipo de celebraciones, garantizando una experiencia culinaria única y adaptada a las necesidades del evento.</p>
+                  <button>Reservar</button>
+                </div>
+            </div>
+
+            <div class="clases_cocina">
+                <h3>CLASES DE COCINA</h3>
+                <div class="capa_oscura"></div>
+                <img src="img/clases_de_cocina.jpg" alt="Chef a domicilio" onclick="toggleContent('chef-a-domicilio')">
+                <div id="chef-a-domicilio" style="display: none;">
+                  <p>Ofrece aprendizaje práctico y personalizado, enseñando técnicas culinarias, recetas y trucos profesionales para mejorar tus habilidades en la cocina de manera divertida e interactiva.</p>
+                  <button>Reservar</button>
+                </div>
+            </div>
+
+            <div class="menu_personalizado">
+                <h3>MENÚ PERSONALIZADO</h3>
+                <div class="capa_oscura"></div>
+                <img src="img/menu_personalizado.jpg" alt="Chef a domicilio" onclick="toggleContent('chef-a-domicilio')">
+                <div id="chef-a-domicilio" style="display: none;">
+                  <p>Crea experiencias gastronómicas a medida, adaptando cada plato a tus gustos, necesidades dietéticas, ocasiones especiales, garantizando calidad y creatividad en cada comida.</p>
+                  <button>Reservar</button>
+                </div>
+            </div>
+
+            <div class="asesoria_personalizada">
+                <h3>ASESORÍA GASTRONÓMICA</h3>
+                <div class="capa_oscura"></div>
+                <img src="img/asesoria_gastronomica.jpg" alt="Chef a domicilio" onclick="toggleContent('chef-a-domicilio')">
+                <div id="chef-a-domicilio" style="display: none;">
+                  <p>Brinda orientación experta para optimizar menús, mejorar técnicas culinarias y elevar la calidad de la cocina en restaurantes, emprendimientos, proyectos gastronómicos.</p>
+                  <button>Reservar</button>
+                </div>
+            </div>
+
+            <div class="dietas_especiales">
+                <h3>DIETAS ESPECIALES</h3>
+                <div class="capa_oscura"></div>
+                <img src="img/dietas_especiales.jpg" alt="Chef a domicilio" onclick="toggleContent('chef-a-domicilio')">
+                <div id="chef-a-domicilio" style="display: none;">
+                  <p>Diseña menús adaptados a necesidades específicas, como alimentación vegana, sin gluten o baja en calorías, garantizando platos nutritivos, equilibrados y llenos de sabor.</p>
+                  <button>Reservar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Clientes">
+        <div>
+            <h2 class="titulo_clientes">CLIENTES</h2>
+        </div>
+
+        <div class="testimonios_carrusel">
+            <div class="testimonio_1">
+              <blockquote>
+                <p>"Una experiencia culinaria sublime que deleitó todos nuestros sentidos."</p>
+                <cite>Barcelo Hotel Group</cite>
+              </blockquote>
+            </div>
+            <div class="testimonial_2">
+              <blockquote>
+                <p>"La comida es exquisita y el servicio es excepcional. ¡Volveremos pronto!"</p>
+                <cite>María Gómez</cite>
+              </blockquote>
+            </div>
+            <div class="testimonial_3">
+              <blockquote>
+                <p>"Disfruté de una velada mágica gracias a la elegancia de su cocina."</p>
+                <cite>Juan Pérez</cite>
+              </blockquote>
+            </div>
+        </div>
+
+        <div class="galeria_platos">
+            <P>La elegancia de la alta cocina al alcance de tu mesa.</P>
+            <div class="galeria">
+              <div class="plato_1">
+                <img src="img/plato1.jpg" alt="Plato 1">
+              </div>
+
+              <div class="plato_2">
+                <img src="img/plato2.jpg" alt="Plato 2">
+              </div>
+
+              <div class="plato_3">
+                <img src="img/plato3.jpg" alt="Plato 3">
+              </div>
+
+              <div class="plato_4">
+                <img src="img/plato4.jpg" alt="Plato 4">
+              </div>
+
+              <div class="plato_5">
+                <img src="img/plato5.jpg" alt="Plato 5">
+              </div>
+
+              <div class="plato_6">
+                <img src="img/plato6.jpg" alt="Plato 6">
+              </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="interfaz_3">
+        <div class="formulario">
+            
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <script>
+        function toggleContent(id) {
+          const contentDiv = document.getElementById(id);
+          if (contentDiv.style.display === 'none') {
+            contentDiv.style.display = 'block';
+          } else {
+            contentDiv.style.display = 'none';
+          }
+        }
+      </script>
+</body>
+</html>
