@@ -273,9 +273,75 @@ button:hover {
     font-family: serif;
     color: #f7f7f7;
 }
+.testimonios_carrusel {
+    position: relative; /* Posiciona los botones de navegación */
+    width: 400px; /* Ancho del carrusel */
+    margin: 20px auto; /* Centra el carrusel */
+    overflow: hidden; /* Oculta el contenido que sobresale */
+    border: 1px solid #ddd; /* Borde del carrusel */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.testimonio {
+    display: none; /* Oculta todas las tarjetas por defecto */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Color de fondo */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.testimonio.active {
+    display: block; /* Muestra solo la tarjeta activa */
+}
+
+blockquote {
+    margin: 0;
+    font-style: italic; 
+}
+
+cite {
+    display: block; 
+    margin-top: 10px; 
+    font-weight: bold; 
+    text-align: right;
+}
+
+.boton_clientes {
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    cursor: pointer; 
+    color: #F7F7F7;
+}
+
+.prev {
+    left: -10px; /*Posición del botón anterior*/
+    border-radius: 100%;
+}
+
+.next {
+    right: -10px; /*Posición del botón siguiente*/
+    border-radius: 100%;
+}
 /*FIN DE SECCIÓN DE CLIENTES*/
 
 /*SECCIÓN DE GALERÍA*/
+.frase {
+    display: grid; 
+    grid-template-columns: auto 1fr auto; 
+    align-items: center; 
+    font-weight: bold;
+}
+
+.imagen {
+    width: 100px; 
+    height: auto; 
+    margin: 0 10px; 
+}
+
 img{
     width: 100%;
 }
@@ -311,9 +377,9 @@ img{
 .interfaz_4 {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     padding: 20px;
-    background-color: #f7F7F7; /* Fondo claro */
+    background-color: #F7F7F7; /* Fondo claro */
     border-radius: 10px;
     max-width: 500px; /* Limita el ancho máximo */
     margin: 0 auto;
@@ -335,7 +401,7 @@ img{
 
 label {
     font-size: 1rem;
-    color: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );; /* Color dorado para las etiquetas */
+    color: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 ); /* Color dorado para las etiquetas */
     margin-bottom: 5px;
 }
 
@@ -350,7 +416,7 @@ input, select {
 }
 
 input::placeholder {
-    color: #aaa; /* Color del placeholder */
+    color: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );
 }
 
 select {
@@ -359,23 +425,25 @@ select {
 
 input:focus, select:focus {
     outline: none;
-    border-color: #a87e25; /* Color más oscuro en focus */
+    border-color: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 ); /* Color más oscuro en focus */
 }
 
 /* Botón de Reservar */
 .boton_reservar button {
     width: 30%;
     padding: 15px;
-    background-color: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );;
+    background-color: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );
     color: #F7F7F7;
     border: none;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .boton_reservar button:hover {
-    background-color: #a87e25; /* Efecto hover en el botón */
+    background: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );
+    color: #F7F7F7;
+    border-color: #c59a31;
 }
 
 /* Contactos */

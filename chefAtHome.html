@@ -96,7 +96,7 @@
                 <img src="img/dietas_especiales.png" alt="Chef a domicilio" onclick="toggleContent('chef-a-domicilio')">
                 <div id="chef-a-domicilio" style="display: none;">
                   <p>Diseña menús adaptados a necesidades específicas, como alimentación vegana, sin gluten o baja en calorías, garantizando platos nutritivos, equilibrados y llenos de sabor.</p>
-                  <button>Reservar</button>
+                  <button class="boton_clientes">Reservar</button>
                 </div>
             </div>
         </div>
@@ -108,28 +108,35 @@
         </div>
 
         <div class="testimonios_carrusel">
-            <div class="testimonio_1">
+          <div class="testimonio active">
               <blockquote>
-                <p>"Una experiencia culinaria sublime que deleitó todos nuestros sentidos."</p>
-                <cite>Barcelo Hotel Group</cite>
+                  <p>"Una experiencia culinaria sublime que deleitó todos nuestros sentidos."</p>
+                  <cite>Barcelo Hotel Group</cite>
               </blockquote>
-            </div>
-            <div class="testimonial_2">
+          </div>
+          <div class="testimonio">
               <blockquote>
-                <p>"La comida es exquisita y el servicio es excepcional. ¡Volveremos pronto!"</p>
-                <cite>María Gómez</cite>
+                  <p>"La comida es exquisita y el servicio es excepcional. ¡Volveremos pronto!"</p>
+                  <cite>María Gómez</cite>
               </blockquote>
-            </div>
-            <div class="testimonial_3">
+          </div>
+          <div class="testimonio">
               <blockquote>
-                <p>"Disfruté de una velada mágica gracias a la elegancia de su cocina."</p>
-                <cite>Juan Pérez</cite>
+                  <p>"Disfruté de una velada mágica gracias a la elegancia de su cocina."</p>
+                  <cite>Juan Pérez</cite>
               </blockquote>
-            </div>
-        </div>
+          </div>
+          <button class="prev" onclick="cambiarSlide(-1)">&#10094;</button>
+          <button class="next" onclick="cambiarSlide(1)">&#10095;</button>
+      </div>
 
         <div class="galeria_platos">
-            <P>La elegancia de la alta cocina al alcance de tu mesa.</P>
+          <div class="frase">
+            <img src="img/linea.png" alt="Imagen 1" class="imagen">
+            <P>"La elegancia de la alta cocina al alcance de tu mesa."</P>
+            <img src="img/linea.png" alt="Imagen 2" class="imagen">
+          </div>
+            
             <div class="galeria">
               <div class="plato_1">
                 <img src="img/plato1.jpg" alt="Plato 1">
@@ -195,11 +202,12 @@
       </form>
       <div class="contactos">
           <div class="redes">
-              <img src="img/">
-              <img src="img/">
+              <img src="img/logo_whatsapp.png">
+              <img src="img/logo_correo.png">
           </div>
-      </div>    
-    
+      </div>
+    </section>   
+    </body>
       <script src="script.js"></script>
 
     <script>
