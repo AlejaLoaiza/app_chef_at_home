@@ -175,7 +175,7 @@ body {
 
 .titulo_servicios {
     text-align: center;
-    background: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );
+    background: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31);
     padding: 15px 0;
     margin-bottom: 30px;
     font-family: serif;
@@ -202,18 +202,22 @@ body {
 }
 
 .servicios h3 {
+    font-size: 21px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #020202;
+    color: #ffffff; /* Mantener el texto en blanco */
     font-family: serif;
     text-transform: uppercase;
     z-index: 2;
+    transition: color 0.5s ease;
+    background: none;
+    opacity: 1 !important; /* Forzar que el texto no tenga opacidad */
 }
 
-.servicios img:hover {
-    transform: scale(1.05);
+.servicios div:hover img {
+    transform: scale(1.05); /* Aplica el hover solo a la imagen */
 }
 
 .capa_oscura {
@@ -222,29 +226,35 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Capa de opacidad */
+    background: rgba(0, 0, 0, 0.5); /* Aplica opacidad solo a la capa oscura */
     z-index: 1;
     pointer-events: none;
-    transition:  0.5s ease;
+    transition: 0.5s ease;
 }
 
-.servicios:hover .capa_oscura {
-    background: rgba(0, 0, 0, 0.7); /* Oscurece más al pasar el ratón */
+.servicios div:hover .capa_oscura {
+    background: linear-gradient(to right, rgba(197, 154, 49, 0.7), rgba(247, 220, 123, 0.7), rgba(247, 220, 123, 0.7), rgba(197, 154, 49, 0.7));
+}
+
+.servicios div:hover h3 {
+    color: #ffffff; /* Mantener el texto blanco en hover */
 }
 
 .button {
     position: relative;
     z-index: 3;
     padding: 2px;
-    transition:  0.3s ease;
+    transition: 0.3s ease;
     margin-top: 0px;
-    background-color: #a87e25;
+    background-color: #c59a31;
+    opacity: 0.8; /* Aplica opacidad solo al botón */
 }
 
 .button:hover {
-    background-color:linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );
+    background: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31);
     margin: 0;
     padding: 0;
+    opacity: 1; /* Sin opacidad en hover */
 }
 
 .servicios p {
@@ -254,23 +264,33 @@ body {
     font-size: 1rem;
     padding: 100px;
     margin-top: 10px;
+    background: none; /* Sin fondo */
+    z-index: 2;
 }
+
+/* Eliminar cualquier opacidad que afecte al texto */
+.servicios h3 {
+    opacity: 1 !important; /* Asegura que el texto sea completamente opaco */
+}
+
 
 .btns_reservar {
     display: inline-block; 
     padding: 10px 20px; 
     margin: 5px;
     background-color: #f7f7f7;
-    color: black; 
-    border: 1px solid black; 
+    color: #020202; 
+    border: 1.5px solid #c59a31; 
     text-decoration: none; /* Quita el subrayado */
     text-align: center; /* Centra el texto */
+    z-index: 2;
 }
 
 .btns_reservar:hover {
     background: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );
     color: white;
     border-color: #c59a31;
+    z-index: 2;
 }
 
 /*SECCIÓN CLIENTES*/
@@ -367,24 +387,32 @@ img{
 
 .galeria {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /*3 columnas*/
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 10px; /* Espacio entre las imágenes */
     padding: 10px; /* Espaciado alrededor de la galería */
 }
 
 .galeria div {
-    overflow: hidden; /* Para recortar imágenes que sobresalgan */
+    position: relative;
+    overflow: hidden; /* Recorta las imágenes que sobresalgan */
+    padding-top: 75%; /* Esto crea una relación de aspecto de 4:3 (ajusta si necesitas otra proporción) */
 }
 
 .galeria img {
-    width: 100%; 
-    height: auto; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste al espacio sin perder su proporción */
     transition: transform 0.3s;
 }
 
 .galeria div:hover img {
     transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
 }
+
+
 
 /*FIN DE SECCIÓN DE GALERÍA*/
 
