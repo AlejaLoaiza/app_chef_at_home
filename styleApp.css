@@ -225,7 +225,7 @@ body {
     background: rgba(0, 0, 0, 0.5); /* Capa de opacidad */
     z-index: 1;
     pointer-events: none;
-    transition: background 0.5s ease;
+    transition:  0.5s ease;
 }
 
 .servicios:hover .capa_oscura {
@@ -236,7 +236,7 @@ body {
     position: relative;
     z-index: 3;
     padding: 2px;
-    transition: background 0.3s ease;
+    transition:  0.3s ease;
     margin-top: 0px;
     background-color: #a87e25;
 }
@@ -257,12 +257,12 @@ body {
 }
 
 .btns_reservar {
-    display: inline-block; /* Permite aplicar padding y margin */
-    padding: 10px 20px; /* Espaciado interno */
+    display: inline-block; 
+    padding: 10px 20px; 
     margin: 5px;
-    background-color: #f7f7f7
-    color: black; /* Texto negro */
-    border: 1px solid black; /* Borde negro */
+    background-color: #f7f7f7;
+    color: black; 
+    border: 1px solid black; 
     text-decoration: none; /* Quita el subrayado */
     text-align: center; /* Centra el texto */
 }
@@ -415,8 +415,12 @@ img{
 }
 
 label {
+    font-family: serif;
     font-size: 1rem;
     color: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 ); /* Color dorado para las etiquetas */
+    margin-bottom: 5px;
+    display: block;
+    text-align: left; /* Para que los subtítulos se vean más resaltados */
     margin-bottom: 5px;
 }
 
@@ -448,8 +452,8 @@ input:focus, select:focus {
     width: 30%;
     padding: 15px;
     background-color: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );
-    color: #F7F7F7;
-    border: none;
+    color: #020202;
+    border-color: #c59a31;
     font-size: 1rem;
     cursor: pointer;
     transition: 0.3s ease;
@@ -457,7 +461,6 @@ input:focus, select:focus {
 
 .boton_reservar button:hover {
     background: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );
-    color: #F7F7F7;
     border-color: #c59a31;
 }
 
