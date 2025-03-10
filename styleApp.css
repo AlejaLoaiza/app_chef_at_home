@@ -169,7 +169,7 @@ body {
 
 /*SECCIÓN DE SERVICIOS */
 .interfaz_2 {
-    padding: 0px;
+    padding: 0;
     background-color: #f7f7f7;
 }
 
@@ -182,6 +182,7 @@ body {
     color: #f7f7f7;
 }
 
+/* Estructura de servicios */
 .servicios {
     display: flex;
     flex-direction: column;
@@ -194,40 +195,31 @@ body {
     overflow: hidden;
 }
 
+/* Estilo de las imágenes */
+.servicios .img_con_opacidad {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
 .servicios img {
     width: 100%;
     height: auto;
     transition: transform 0.5s ease;
     display: block;
+    z-index: 1; /* Mantén la imagen en el fondo */
 }
 
-.servicios h3 {
-    font-size: 21px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff; /* Mantener el texto en blanco */
-    font-family: serif;
-    text-transform: uppercase;
-    z-index: 2;
-    transition: color 0.5s ease;
-    background: none;
-    opacity: 1 !important; /* Forzar que el texto no tenga opacidad */
-}
-
-.servicios div:hover img {
-    transform: scale(1.05); /* Aplica el hover solo a la imagen */
-}
-
+/* Capa oscura sobre la imagen */
 .capa_oscura {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Aplica opacidad solo a la capa oscura */
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.5); /* Capa oscura solo en la imagen */
+    z-index: 2; /* Encima de la imagen */
     pointer-events: none;
     transition: 0.5s ease;
 }
@@ -236,43 +228,60 @@ body {
     background: linear-gradient(to right, rgba(197, 154, 49, 0.7), rgba(247, 220, 123, 0.7), rgba(247, 220, 123, 0.7), rgba(197, 154, 49, 0.7));
 }
 
-.servicios div:hover h3 {
-    color: #ffffff; /* Mantener el texto blanco en hover */
+/* Título de los servicios */
+.servicios h3 {
+    font-size: 21px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-family: serif;
+    text-transform: uppercase;
+    z-index: 3; /* Por encima de la imagen y capa oscura */
+    transition: color 0.5s ease;
+    background: none;
+    opacity: 1 !important; /* Mantén el texto sin opacidad */
 }
 
-.button {
+/* Hover en las imágenes */
+.servicios div:hover img {
+    transform: scale(1.05); /* Solo agranda la imagen al pasar el mouse */
+}
+
+/* Botones de reservar */
+.btns_reservar {
     position: relative;
     z-index: 3;
-    padding: 2px;
-    transition: 0.3s ease;
-    margin-top: 0px;
+    padding: 10px 20px;
     background-color: #c59a31;
-    opacity: 0.8; /* Aplica opacidad solo al botón */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    opacity: 0.9; /* Opacidad solo en el botón */
 }
 
-.button:hover {
+.btns_reservar:hover {
     background: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31);
-    margin: 0;
-    padding: 0;
-    opacity: 1; /* Sin opacidad en hover */
+    opacity: 1; /* Elimina la opacidad en hover */
 }
 
+/* Texto de descripción */
 .servicios p {
     color: #020202;
     z-index: 3;
     position: relative;
     font-size: 1rem;
-    padding: 100px;
+    padding: 10px;
     margin-top: 10px;
-    background: none; /* Sin fondo */
-    z-index: 2;
+    background: none;
 }
 
-/* Eliminar cualquier opacidad que afecte al texto */
+/* Asegura que el texto (h3) nunca tenga opacidad */
 .servicios h3 {
-    opacity: 1 !important; /* Asegura que el texto sea completamente opaco */
+    opacity: 1 !important;
 }
-
 
 .btns_reservar {
     display: inline-block; 
