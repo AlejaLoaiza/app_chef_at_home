@@ -402,7 +402,7 @@ img{
 
 /* Logo */
 .logo img {
-    width: 150px; /* Ajusta el tamaño del logo */
+    width: 200px; /* Ajusta el tamaño del logo */
     margin-bottom: 20px;
 }
 
@@ -447,6 +447,21 @@ input:focus, select:focus {
     border-color: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 ); /* Color más oscuro en focus */
 }
 
+.Columnas {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.fecha, .comensales {
+    flex: 1;
+}
+
+input[type="date"], input[type="number"] {
+    width: 100%; 
+}
+
+
 /* Botón de Reservar */
 .boton_reservar button {
     width: 30%;
@@ -462,6 +477,7 @@ input:focus, select:focus {
 .boton_reservar button:hover {
     background: linear-gradient(to right, #c59a31, #f7dc7b, #f7dc7b, #c59a31 );
     border-color: #c59a31;
+    color: #f7f7f7;
 }
 
 /* Contactos */

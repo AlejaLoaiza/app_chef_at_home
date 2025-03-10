@@ -200,14 +200,17 @@
                   <option value="banquetes">Clases de cocina</option>
               </select>
           </div>
-          <div class="fecha">
-              <label for="date">Fecha</label>
-              <input type="text" id="date" placeholder="dd/mm/aa">
+          <div class="Columnas">
+            <div class="fecha">
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha" name="fecha">
+            </div>
+            <div class="comensales">
+                <label for="comensales">No. de comensales</label>
+                <input type="number" id="comensales" name="comensales">
+            </div>
           </div>
-          <div class="comensales">
-              <label for="guests">No. comensales</label>
-              <input type="number" id="guests" placeholder="15">
-          </div>
+        
           <div class="boton_reservar">
               <button type="submit">Reservar</button>
           </div>
