@@ -135,7 +135,7 @@ body {
 }
 
 /*RESPONSIVE MENU*/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
     .menu-icono-img {
         width: 25px;
     }
@@ -235,13 +235,14 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #ffffff;
+    color: #f7f7f7;
     font-family: serif;
     text-transform: uppercase;
     z-index: 3; /* Por encima de la imagen y capa oscura */
     transition: color 0.5s ease;
     background: none;
     opacity: 1 !important; /* Mantén el texto sin opacidad */
+    align-items: center;
 }
 
 /* Hover en las imágenes */
@@ -258,7 +259,7 @@ body {
     color: #ffffff;
     text-decoration: none;
     font-size: 1rem;
-    transition: background 0.3s ease;
+    transition:  0.3s ease;
     opacity: 0.9; /* Opacidad solo en el botón */
 }
 
@@ -301,6 +302,36 @@ body {
     border-color: #c59a31;
     z-index: 2;
 }
+
+/* RESPONSIVE SERVICIOS */
+@media (max-width: 767px) and (min-width: 480px) {
+    .titulo_servicios {
+        font-size: 1.5rem;
+        padding: 12px;
+        margin-bottom: 25px;
+    }
+
+    .servicios {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .servicios h3 {
+        font-size: 19px;
+        align-items: center;
+    }
+
+    .btns_reservar {
+        font-size: 0.95rem;
+        padding: 8px 16px;
+    }
+
+    /* Ajustar el padding y margen del texto descriptivo */
+    .servicios p {
+        font-size: 0.95rem;
+        padding: 8px;
+    }    
+ }
 
 /*SECCIÓN CLIENTES*/
 .clientes {
