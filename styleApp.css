@@ -398,8 +398,54 @@ cite {
 }
 
 .next {
-    right: -10px; /*Posición del botón siguiente*/
+    right: -10px; 
     border-radius: 100%;
+}
+
+/*--RESPONSIVE CLEINTES--*/
+@media (max-width: 767px) {
+    .clientes {
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    .titulo_clientes {
+        padding: 10px 0;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .testimonios_carrusel {
+        width: 300px;
+        margin: 10px auto; 
+    }
+
+
+    .testimonio {
+        padding: 15px; 
+    }
+
+    blockquote {
+        font-size: 0.9rem; 
+    }
+
+    cite {
+        margin-top: 8px;
+        font-size: 0.8rem; 
+    }
+
+    .boton_clientes {
+        padding: 8px; 
+        top: 45%; 
+    }
+
+    .prev {
+        left: -8px; 
+    }
+
+    .next {
+        right: -8px; 
+    }
 }
 /*FIN DE SECCIÓN DE CLIENTES*/
 
@@ -451,9 +497,6 @@ img{
 .galeria div:hover img {
     transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
 }
-
-
-
 /*FIN DE SECCIÓN DE GALERÍA*/
 
 /*-- FORMULARIO--*/
@@ -563,4 +606,51 @@ input[type="date"], input[type="number"] {
 
 .redes img:hover {
     opacity: 0.8; /* Efecto hover en los íconos de redes sociales */
+}
+
+/*--RESPONSIVE FORMULARIO--*/
+@media (max-width: 767px) {
+    .interfaz_4 {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .logo img {
+        width: 150px;
+        margin-bottom: 15px;
+    }
+
+    .reserva {
+        gap: 15px;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input, select {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .Columnas {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .boton_reservar button {
+        width: 50%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .contactos {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .redes img {
+        width: 35px;
+        margin: 5px;
+    }
 }
